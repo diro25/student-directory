@@ -14,11 +14,10 @@ const YEAR_NAMES = {
 const STORAGE_KEY = "student-directory:v1";
 const THEME_KEY = "student-directory:theme";
 
-// ---------- State ----------
-let students = load() ?? [
-  { id: 1, name: "diriba", department: "CSE", year: 3 },
-  { id: 2, name: "Nagasa",   department: "sOFTWARE ENGINEERING",      year: 5 },
-  { id: 3, name: "Abel",   department: "school of elec.",        year: 2 },
+let students = (load()?.length ? load() : null) ?? [
+  { id: 1, name: "diriba", department: "school of elec.", year: 2 },
+  { id: 2, name: "sori",   department: "Electrical",      year: 3 },
+  { id: 3, name: "dase",   department: "Software",        year: 3 },
 ];
 let activeFilter = "All";
 
