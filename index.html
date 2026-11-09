@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>🎓 Student Directory</h1>
+      <button id="theme-toggle" class="btn btn--pill" type="button"></button>
+    </header>
+
+    <form id="student-form" class="form">
+      <input id="name" class="field" type="text" placeholder="Student name" autocomplete="off" required />
+      <select id="department" class="field" aria-label="Department"></select>
+      <select id="year" class="field" aria-label="Year">
+        <option value="1">freshman</option>
+        <option value="2">sophomore</option>
+        <option value="3">junior</option>
+        <option value="4">senior</option>
+        <option value="5">alumni</option>
+      </select>
+      <button class="btn btn--pill" type="submit">Add</button>
+    </form>
+
+    <nav id="filters" class="filters" aria-label="Filter by department"></nav>
+
+    <ul id="student-list" class="list"></ul>
+    <p id="count" class="count"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
